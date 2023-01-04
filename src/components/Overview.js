@@ -6,10 +6,15 @@ const Overview = (props) => {
   return (
     <ul>
       {tasks.map((task) => {
-        return <li style={{listStyleType: "none"}}key={task.id}>{task.number}  {task.text}</li>;
+        return (<div>
+                    <li style={{listStyleType: "none"}}key={task.id}>{task.number}.  {task.text}</li>
+                </div>);
       })}
+      
     </ul>
   );
 };
+
+
 
 export default Overview;
